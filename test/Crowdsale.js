@@ -13,7 +13,6 @@ describe('Crowdsale', () => {
 
     beforeEach(async () => {
         //Load contracts
-
         const Crowdsale = await ethers.getContractFactory('Crowdsale')
         const Token = await ethers.getContractFactory('Token')
 
@@ -158,7 +157,6 @@ describe('Crowdsale', () => {
             it('emits a Finalize event', async () => {
                 await expect(transaction).to.emit(crowdsale, 'Finalize').withArgs(amount, value)
             })
-
         })
 
         describe('Failure', () =>{
