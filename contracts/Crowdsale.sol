@@ -22,6 +22,11 @@ contract Crowdsale {
         
     }
 
+    receive() external payable {
+        uint amount = msg.value / price;
+        buyTokens(amount * 1e18);
+    }
+
     function buyTokens(uint _amount) public payable {
         require(msg.value == (_amount / 1e18) * price); 
         require(token.balanceOf(address(this)) >= _amount);//this corresponds to the address of the current SC that we are writing code inside of, and has enough tokens to faciliate the transfer; 

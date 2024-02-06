@@ -18,7 +18,7 @@ describe('Crowdsale', () => {
         const Token = await ethers.getContractFactory('Token')
 
         //Deploy token
-        token = await Token.deploy('Szabika V','BIKA', '1000000')
+        token = await Token.deploy('Szabika V','biKA', '1000000')
         
         //Configure accounts
         accounts = await ethers.getSigners()
@@ -86,5 +86,27 @@ describe('Crowdsale', () => {
             })
         } )
         
+    })
+
+    describe('Sending ETH', () => {
+        let transaction, result
+        let amount = ether(10)
+        
+        describe('Success', () =>{
+            
+            beforeEach(async () =>{
+                transaction = await user1.sendTransaction({ to: crowdsale.address, value: amount})
+                result = await transaction.wait()
+            })
+
+            it('updates contracts ether balance', async () => {
+                expect(await ethers.provider.getBalance(crowdsale.address)).to.equal(amount)
+            })
+
+            it('updates user token balance', async () => {
+                expect(await token.balanceOf(user1.address)).to.equal(amount)
+            })
+
+        })
     })
 })
