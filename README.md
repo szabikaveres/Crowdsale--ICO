@@ -20,9 +20,9 @@
  Crowdsale contract address: 0xEa237301153dc9aF9FF074ECe792e162f5fEDE4F
 
  # How to interact with the project:
-1. Go to [(jolly-mouse-7742.on.fleek.co)]
+1. Go to [(https://odd-voice-2308.on.fleek.co/)]
 2. Connect your wallet
-3. Sign in
+3. Sign in to the contract
 4. Select Sepolia TESTNET
 5. You'll need SepoliaETH to interact with the Crowdsale contract, go to Sepolia Faucet and request some tokens:  [(https://sepoliafaucet.com/)], copy your account public key and paste it in.(It might take few minutes for the SepoliaETH to reach your account).
 6. Add in the amount you wish to purchase, click Buy Tokens. Confirm in Metamask wallet.
