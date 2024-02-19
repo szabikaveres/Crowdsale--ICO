@@ -7,7 +7,7 @@
  Welcome to my real world Cryptocurrency project, called biKA ICO-Crowdsale, where you can purchase biKA tokens, using your metamask wallet.
  The project is currently deployed to Sepolia TestNet.
 
- This ttoken has been created as per ERC-20 standard and tests developed as per Hardhat specifics. 
+ This token has been created as per ERC-20 standard and tests developed as per Hardhat specifics. 
 
  Token name: "Szabika V"
 
